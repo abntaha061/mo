@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Primary Colors -->
+    <color name="primary">#1A1A2E</color>
+    <color name="primary_dark">#0F0F1A</color>
+    <color name="primary_light">#2D2D4E</color>
+
+    <!-- Accent -->
+    <color name="accent">#E94560</color>
+    <color name="accent_light">#FF6B8A</color>
+    <color name="accent_dark">#C73652</color>
+
+    <!-- Secondary Accent -->
+    <color name="secondary">#0F3460</color>
+    <color name="secondary_light">#16213E</color>
+
+    <!-- Neutral -->
+    <color name="surface">#1E1E35</color>
+    <color name="surface_variant">#252542</color>
+    <color name="card_bg">#232340</color>
+
+    <!-- Text -->
+    <color name="text_primary">#FFFFFF</color>
+    <color name="text_secondary">#B0B0CC</color>
+    <color name="text_hint">#6B6B8A</color>
+
+    <!-- Tool Card Colors -->
+    <color name="tool_pdf">#E94560</color>
+    <color name="tool_merge">#7C4DFF</color>
+    <color name="tool_split">#00BCD4</color>
+    <color name="tool_compress">#FF6D00</color>
+    <color name="tool_image">#00C853</color>
+    <color name="tool_rotate">#FF4081</color>
+    <color name="tool_protect">#FFD600</color>
+    <color name="tool_watermark">#2979FF</color>
+
+    <!-- Status -->
+    <color name="success">#4CAF50</color>
+    <color name="error">#F44336</color>
+    <color name="warning">#FF9800</color>
+
+    <!-- Divider -->
+    <color name="divider">#2A2A4A</color>
+
+    <!-- Transparent -->
+    <color name="transparent">#00000000</color>
+    <color name="overlay">#80000000</color>
+</resources>
