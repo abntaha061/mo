@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">PDF Master</string>
+
+    <!-- Navigation -->
+    <string name="nav_home">الرئيسية</string>
+    <string name="nav_pdf">PDF</string>
+    <string name="nav_word">Word</string>
+    <string name="nav_settings">الإعدادات</string>
+
+    <!-- Home -->
+    <string name="welcome_title">PDF Master</string>
+    <string name="welcome_subtitle">كل أدوات الملفات في مكان واحد</string>
+    <string name="recent_files">الملفات الأخيرة</string>
+    <string name="no_recent_files">لا توجد ملفات حديثة</string>
+    <string name="quick_tools">الأدوات السريعة</string>
+
+    <!-- PDF Tools -->
+    <string name="pdf_tools">أدوات PDF</string>
+    <string name="pdf_view">عرض PDF</string>
+    <string name="pdf_merge">دمج ملفات</string>
+    <string name="pdf_split">تقسيم PDF</string>
+    <string name="pdf_compress">ضغط PDF</string>
+    <string name="pdf_to_image">PDF إلى صورة</string>
+    <string name="pdf_rotate">تدوير الصفحات</string>
+    <string name="pdf_protect">حماية بكلمة سر</string>
+    <string name="pdf_watermark">إضافة علامة مائية</string>
+
+    <!-- Word Tools -->
+    <string name="word_tools">أدوات Word</string>
+    <string name="word_create">إنشاء مستند</string>
+    <string name="word_edit">تعديل مستند</string>
+    <string name="word_to_pdf">Word إلى PDF</string>
+
+    <!-- Actions -->
+    <string name="select_file">اختر ملف</string>
+    <string name="select_files">اختر ملفات</string>
+    <string name="save">حفظ</string>
+    <string name="cancel">إلغاء</string>
+    <string name="done">تم</string>
+    <string name="processing">جاري المعالجة…</string>
+    <string name="success">تم بنجاح!</string>
+    <string name="error">حدث خطأ</string>
+    <string name="share">مشاركة</string>
+    <string name="open">فتح</string>
+
+    <!-- Permissions -->
+    <string name="permission_required">الإذن مطلوب</string>
+    <string name="permission_message">نحتاج إذن الوصول للملفات لاستخدام هذه الميزة</string>
+    <string name="grant_permission">منح الإذن</string>
+</resources>
