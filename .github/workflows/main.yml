@@ -10,6 +10,11 @@ jobs:
   build:
     runs-on: ubuntu-latest
 
+    # 1. توجيه بيئة العمل للدخول إلى مجلد المشروع
+    defaults:
+      run:
+        working-directory: ./PDFMaster
+
     steps:
     - name: Checkout Code
       uses: actions/checkout@v4
@@ -21,13 +26,11 @@ jobs:
         distribution: 'temurin'
         cache: gradle
 
-    # الخطوة الجديدة: إنشاء ملف debug.keystore وهمي لتجاوز خطأ التوقيع
     - name: Generate debug keystore
       run: |
         keytool -genkey -v -keystore debug.keystore -storepass android -alias androiddebugkey -keypass android -keyalg RSA -keysize 2048 -validity 10000 -dname "C=US, O=Android, CN=Android Debug"
 
-    - name: Generate Gradle Wrapper
-      run: gradle wrapper
+    # تم حذف خطوة Generate Gradle Wrapper لأنها تسبب تعارضاً مع إصدارات Gradle الحديثة
 
     - name: Grant execute permission for gradlew
       run: chmod +x gradlew
@@ -39,4 +42,5 @@ jobs:
       uses: actions/upload-artifact@v4
       with:
         name: app-debug
-        path: app/build/outputs/apk/debug/app-debug.apk
+        # 2. تعديل مسار استخراج التطبيق ليطابق المجلد الفعلي
+        path: PDFMaster/app/build/outputs/apk/debug/app-debug.apk
