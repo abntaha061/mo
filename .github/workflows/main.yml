@@ -10,11 +10,6 @@ jobs:
   build:
     runs-on: ubuntu-latest
 
-    # 1. توجيه بيئة العمل للدخول إلى مجلد المشروع
-    defaults:
-      run:
-        working-directory: ./PDFMaster
-
     steps:
     - name: Checkout Code
       uses: actions/checkout@v4
@@ -28,19 +23,21 @@ jobs:
 
     - name: Generate debug keystore
       run: |
+        cd PDFMaster
         keytool -genkey -v -keystore debug.keystore -storepass android -alias androiddebugkey -keypass android -keyalg RSA -keysize 2048 -validity 10000 -dname "C=US, O=Android, CN=Android Debug"
 
-    # تم حذف خطوة Generate Gradle Wrapper لأنها تسبب تعارضاً مع إصدارات Gradle الحديثة
-
     - name: Grant execute permission for gradlew
-      run: chmod +x gradlew
+      run: |
+        cd PDFMaster
+        chmod +x gradlew
 
     - name: Build with Gradle
-      run: ./gradlew assembleDebug
+      run: |
+        cd PDFMaster
+        ./gradlew assembleDebug
 
     - name: Upload APK
       uses: actions/upload-artifact@v4
       with:
         name: app-debug
-        # 2. تعديل مسار استخراج التطبيق ليطابق المجلد الفعلي
         path: PDFMaster/app/build/outputs/apk/debug/app-debug.apk
